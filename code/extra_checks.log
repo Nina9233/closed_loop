@@ -1,0 +1,15 @@
+[perfect-sensor bound] baseline denial 13.5%  |  zero noise, zero false alarms, 'infinite' range, zero latency: 18.5%
+[latency, r50=150 m] denied 20/200 (0 s) vs 22/200 (5 s) | flipped denied->docked 5, docked->denied 7 | exact McNemar p=0.7744
+[latency, r50=80 m] denied 20/200 (0 s) vs 18/200 (5 s) | flipped denied->docked 6, docked->denied 4 | exact McNemar p=0.7539
+
+=== Metrics on the baseline Monte Carlo (N=200) ===
+runs with a confirmed track: 197/200
+track initiation TRUE range: median 3 m (IQR 2-9)
+estimation error after maturity (per-run RMS): range median 0.22 m, range-rate median 0.077 m/s
+false-alarm-triggered manoeuvres per run: 0.000
+runs in which the host armed: 38/200
+FOV-loss episodes per run (all): 0.22; caused while armed (own manoeuvre): 0.20 per run, 38 runs with >=1
+chaser delta-v used (re-aiming only): mean 0.165 m/s, max 1.000 m/s (budget 1.0)
+cumulative torque impulse (upper bound on wheel momentum use): mean 1.65, max 13.82 N*m*s
+time to dock (docked runs): median 1072 s
+outcomes: {'timeout': 3, 'denied_dv_exhausted': 24, 'docked': 173}
